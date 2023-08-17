@@ -59806,8 +59806,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loginCanvas: {fileID: 1781047616}
   SignupCanvas: {fileID: 479227743}
-  loginEndpoint: https://ancient-retreat-18243.herokuapp.com/api/users/login
-  signupEndpoint: https://ancient-retreat-18243.herokuapp.com/api/users/signup
+  loginEndpoint: http://localhost:3001/api/users/login
+  signupEndpoint: http://localhost:3001/api/users/signup
   alertText: {fileID: 1023022141}
   signupAlertText: {fileID: 327454757}
   loginButton: {fileID: 920982205}

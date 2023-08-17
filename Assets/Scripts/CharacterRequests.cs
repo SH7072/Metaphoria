@@ -9,8 +9,8 @@ using System;
 
 public class CharacterRequests : MonoBehaviour
 {
-    [SerializeField] private static string saveEndpoint= "http://localhost:3001/api/users/sendCharacterData";
-    [SerializeField] private static string loadEndpoint = "http://localhost:3001/api/users/getUserData/";
+     private static string saveEndpoint = "https://walmart-server.onrender.com/api/users/sendCharacterData";
+     private static string loadEndpoint = "https://walmart-server.onrender.com/api/users/getUserData/";
     AdvancedPeopleSystem.CharacterCustomization character;
 
     private void Start()
@@ -18,18 +18,18 @@ public class CharacterRequests : MonoBehaviour
         character = GetComponent<AdvancedPeopleSystem.CharacterCustomization>();
         GetCharacter(PlayerPrefs.GetString("userId"), (response) =>
         {
-            if(response != null)
+            if (response != null)
             {
                 PlayerPrefs.SetString("characterType", response.characterType);
                 if (response.characterType == "Male")
                 {
                     character.SwitchCharacterSettings(0);
                 }
-                else if(response.characterType == "Female")
+                else if (response.characterType == "Female")
                 {
                     character.SwitchCharacterSettings(1);
                 }
-                if(response.characterData != "")
+                if (response.characterData != "")
                 {
                     character.ApplyCharacterData(response.characterData);
                 }
@@ -89,7 +89,8 @@ public class CharacterRequests : MonoBehaviour
                 Callback(null);
             }
             request.Dispose();
-        }catch(Exception ex)
+        }
+        catch (Exception ex)
         {
             Debug.LogException(ex);
         }

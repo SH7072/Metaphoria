@@ -16,8 +16,8 @@ public class CartItem : MonoBehaviour
     [SerializeField]
     public Button del;
 
-    private string decCartEndPoint = "http://localhost:3001/api/cart/decQuantity/";
-    private string delFromCartEndPoint = "http://localhost:3001/api/cart/removeFromCart/";
+    private string decCartEndPoint = "https://walmart-server.onrender.com/api/cart/decQuantity/";
+    private string delFromCartEndPoint = "https://walmart-server.onrender.com/api/cart/removeFromCart/";
     // Start is called before the first frame update
     void Start()
     {

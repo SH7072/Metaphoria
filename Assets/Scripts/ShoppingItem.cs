@@ -8,16 +8,16 @@ public class ShoppingItem : MonoBehaviour
 {
     [SerializeField]
     public string id;
-    
+
     public string name;
-    
+
     private string price;
-    
+
     private string img;
-    
+
     private string link;
 
-    private string fetchProductEndpoint = "http://localhost:3001/api/products/getProduct/";
+    private string fetchProductEndpoint = "https://walmart-server.onrender.com/api/products/getProduct/";
 
     public void Start()
     {
@@ -26,14 +26,14 @@ public class ShoppingItem : MonoBehaviour
 
     public async void fetchData()
     {
-        if(this.id!="")
+        if (this.id != "")
         {
             try
             {
                 UnityWebRequest request = UnityWebRequest.Get(fetchProductEndpoint + this.id);
                 request.SetRequestHeader("Authorization", "Bearer " + PlayerPrefs.GetString("token"));
                 var handler = request.SendWebRequest();
-                
+
                 while (!handler.isDone)
                 {
                     await Task.Yield();
@@ -45,7 +45,7 @@ public class ShoppingItem : MonoBehaviour
                     Debug.Log(request.error);
                 }
                 else
-                { 
+                {
                     ProductResponse response = JsonUtility.FromJson<ProductResponse>(request.downloadHandler.text);
                     this.name = response.name;
                     this.price = response.price;

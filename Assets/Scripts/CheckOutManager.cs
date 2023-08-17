@@ -4,13 +4,12 @@ using UnityEngine;
 using UnityEngine.Networking;
 using System.Threading.Tasks;
 using System;
-
 public class CheckoutManager : MonoBehaviour
 {
+    // Start is called before the first frame update
+    private string checkoutEndPoint = "https://walmart-server.onrender.com/api/cart/cart_checkout/";
     [SerializeField]
     public string flag;
-    private string checkoutEndPoint = "http://localhost:3001/api/cart/cart_checkout/";
-
     public void checkout()
     {
         Debug.Log(this.flag);

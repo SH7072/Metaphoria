@@ -12,8 +12,8 @@ public class Login : MonoBehaviour
 {
     public GameObject loginCanvas;
     public GameObject SignupCanvas;
-    [SerializeField] private string loginEndpoint = "http://localhost:3001/api/users/login";
-    [SerializeField] private string signupEndpoint = "http://localhost:3001/api/users/signup";
+     private string loginEndpoint = "https://walmart-server.onrender.com/api/users/login";
+     private string signupEndpoint = "https://walmart-server.onrender.com/api/users/signup";
 
     [SerializeField] private TextMeshProUGUI alertText;
     [SerializeField] private TextMeshProUGUI signupAlertText;

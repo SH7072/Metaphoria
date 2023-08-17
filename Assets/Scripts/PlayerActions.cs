@@ -47,17 +47,17 @@ public class PlayerActions : MonoBehaviourPunCallbacks
 
     public PauseMenu pauseMenu;
 
-    private bool tryingOn=false;
+    private bool tryingOn = false;
     private bool isMuted = true;
     private CharacterElementType tryingOnType;
     private int tryingOnTypeInitialValue;
     private CharacterCustomization characterCustomization;
-    private string characterType="Female";
+    private string characterType = "Female";
 
 
 
-    private string addToCartEndpoint = "http://localhost:3001/api/cart/addToCart/";
-    private string fetchCartEndpoint = "http://localhost:3001/api/cart/getCart";
+    private string addToCartEndpoint = "https://walmart-server.onrender.com/api/cart/addToCart/";
+    private string fetchCartEndpoint = "https://walmart-server.onrender.com/api/cart/getCart";
 
     private void Awake()
     {
@@ -141,7 +141,7 @@ public class PlayerActions : MonoBehaviourPunCallbacks
         if (value.isPressed)
         {
             rtcEngine.MuteLocalAudioStream(false);
-            voiceImg.SetActive(true);             
+            voiceImg.SetActive(true);
         }
         else
         {
@@ -158,10 +158,10 @@ public class PlayerActions : MonoBehaviourPunCallbacks
             tryingOn = false;
         }
         else if (Physics.Raycast(Camera.position, Camera.forward, out RaycastHit hit, MaxUseDistance, UseLayers))
-        { 
+        {
             if (hit.collider.TryGetComponent<ShoppingItem>(out ShoppingItem shoppingItem))
             {
-                if (hit.collider.TryGetComponent<TryOnItem>(out TryOnItem tryOnItem)&&tryOnItem.gender == characterType)
+                if (hit.collider.TryGetComponent<TryOnItem>(out TryOnItem tryOnItem) && tryOnItem.gender == characterType)
                 {
                     tryingOn = true;
                     tryingOnType = tryOnItem.type;
@@ -237,7 +237,7 @@ public class PlayerActions : MonoBehaviourPunCallbacks
                 }
                 else if (hit.collider.TryGetComponent<ShoppingItem>(out ShoppingItem shoppingItem))
                 {
-                    if (hit.collider.TryGetComponent<TryOnItem>(out TryOnItem tryOnItem)&&tryOnItem.gender==characterType)
+                    if (hit.collider.TryGetComponent<TryOnItem>(out TryOnItem tryOnItem) && tryOnItem.gender == characterType)
                     {
                         InfoText.text = "Select \"B\" to buy " + shoppingItem.name + " or hold \"T\" to try on";
                     }
@@ -246,7 +246,7 @@ public class PlayerActions : MonoBehaviourPunCallbacks
                         InfoText.text = "Select \"B\" to buy " + shoppingItem.name;
                     }
                 }
-                else if(hit.collider.TryGetComponent<CheckoutManager>(out CheckoutManager cm))
+                else if (hit.collider.TryGetComponent<CheckoutManager>(out CheckoutManager cm))
                 {
                     InfoText.text = "Click \"C\" to checkout this store";
                 }
@@ -327,8 +327,8 @@ public class PlayerActions : MonoBehaviourPunCallbacks
                 }
                 else
                 {
-                Debug.Log(response.data[0].name);
-                cartMenu.setItems(response.data);
+                    Debug.Log(response.data[0].name);
+                    cartMenu.setItems(response.data);
                 }
             }
         }
