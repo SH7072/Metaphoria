@@ -1,22 +1,34 @@
 # MetaPhoria
 
-Demo Video:
-[https://www.youtube.com/watch?v=qB597UEY_OU
-](https://www.youtube.com/watch?v=qB597UEY_OU)
-
-
 # **Solution Statement:**
 Our solution aims to create an immersive virtual shopping experience within a unified 3D environment using Unity3D, with the goal of combining the advantages of both online and in-store shopping. By integrating various features such as authentication, multiple virtual shops, a streamlined purchasing process, and interactive communication, we seek to revolutionize how users explore, interact, and shop for products, while also providing businesses a dynamic marketplace to showcase and sell their offerings.
 
 # **Problem We Are Solving:**
 Traditional online shopping lacks the personalization and exploration found in physical stores. It can be impersonal and overwhelming, lacking the sense of recognition and choice that a real shopping district provides. Our solution bridges this gap by offering an engaging, personalized, and interactive virtual world where users can enjoy the convenience of online shopping while immersing themselves in a 3D space akin to visiting multiple stores in a mall.
 
-# **Example**
+# **Demo**
 
 ### Login/Signup
-![Login_Signup](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Login_Signup](gifs/login_signup_gif.gif)
 
+### Character Customization
+![character_customization](gifs/character_customization.gif)
 
+### Home Island
+![home_island](gifs/intro_gif.gif)
+
+### Add To Cart
+![add_to_cart](gifs/add_to_cart_gif.gif)
+
+### Checkout
+![checkout](gifs/check_out_gif.gif)
+
+### Compelete Transaction Demo
+![transaction](gifs/complete_transaction_gif.gif)
+
+### Complete Demo Video:
+[https://www.youtube.com/watch?v=qB597UEY_OU
+](https://www.youtube.com/watch?v=qB597UEY_OU)
 
 
 # **Process Flow:**
