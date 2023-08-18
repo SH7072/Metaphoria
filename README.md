@@ -1,5 +1,8 @@
 # MetaPhoria
 
+*  Backend Server : https://github.com/SH7072/walmart-server
+
+
 # **Solution Statement:**
 Our solution aims to create an immersive virtual shopping experience within a unified 3D environment using Unity3D, with the goal of combining the advantages of both online and in-store shopping. By integrating various features such as authentication, multiple virtual shops, a streamlined purchasing process, and interactive communication, we seek to revolutionize how users explore, interact, and shop for products, while also providing businesses a dynamic marketplace to showcase and sell their offerings.
 
